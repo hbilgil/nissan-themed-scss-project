@@ -252,3 +252,22 @@ header {
       }
     }
 }
+
+//FOOTER SECTION
+
+footer {
+    background-color: black;
+    display: flex;
+    gap: 50px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 200px;
+    }
+
+    p {
+      color: white;
+    }
+}

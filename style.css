@@ -250,4 +250,19 @@ header #nav-right a {
 #cars-section button:hover {
   background: blue;
   color: white;
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  gap: 50px;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+}
+footer img {
+  max-width: 200px;
+}
+footer p {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
