@@ -58,3 +58,107 @@ header {
       }
     }
 }
+
+// WELCOME SECTION
+
+.hero {
+    min-height: calc(100vh - 68px);
+    padding: 100px;
+    background: linear-gradient(to top, $background 60%, rgb(215, 215, 215) 60%);
+    display: flex;
+    justify-content: space-between;
+  
+    @include mobile {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    @include tablet {
+      align-items: center;
+      flex-direction: column;
+    }
+}
+
+//WELCOME SEC - left side
+
+#slogan {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    align-items: center;
+    gap: 70px;
+
+    @include tablet {
+      gap: 50px;
+    }
+
+    h1 {
+      @extend %baslik;
+      font-size: 30px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 22px;
+    }
+
+    img {
+      max-width: 200px;
+      mix-blend-mode: darken;
+    }
+
+    h2 {
+      @extend %baslik;
+      font-size: 26px;
+      margin-top: 100px;
+    }
+
+    button {
+      background-color: $red;
+      padding: 10px 50px;
+      border: none;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 3px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      &:hover {
+        @extend %hover;
+        background-color: rgb(160, 0, 0);
+      }
+    }
+}
+
+//WELCOME SEC - right side
+
+#images {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+    &-main {
+      max-width: 900px;
+      transition: all 0.3s;
+
+      @include mobile {
+        max-width: 500px;
+      }
+
+      &:hover {
+        transform: translate(-200px, 50px);
+        @extend %hover;
+      }
+    }
+
+    &-second {
+      max-width: 400px;
+      mix-blend-mode: darken;
+    }
+
+    p {
+      max-width: 500px;
+      text-align: center;
+    }
+}
