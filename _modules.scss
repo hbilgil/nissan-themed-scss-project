@@ -46,3 +46,15 @@
       }
     }
 }
+
+@mixin mobile {
+    @media (max-width: 1000px) {
+      @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 1001px) and (max-width: 1500px) {
+      @content;
+    }
+}
