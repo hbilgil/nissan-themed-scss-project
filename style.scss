@@ -20,11 +20,19 @@ header {
     justify-content: space-between;
     font-family: $font-main;
     color: $text-color;
-  
+    @include mobile {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @include tablet {
+        align-items: center;
+    }
     nav {
       display: flex;
       align-items: center;
       padding: 20px 40px;
+
       a {
         text-decoration: none;
         color: $text-color;
@@ -69,13 +77,12 @@ header {
     justify-content: space-between;
   
     @include mobile {
-      align-items: center;
-      flex-direction: column;
+        align-items: center;
+        flex-direction: column;
     }
 
     @include tablet {
-      align-items: center;
-      flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -93,8 +100,11 @@ header {
     }
 
     h1 {
-      @extend %baslik;
-      font-size: 30px;
+        @extend %heading;
+        font-size: 30px;
+        @include mobile {
+            font-size: 22px;
+        }
     }
 
     p {
@@ -108,7 +118,7 @@ header {
     }
 
     h2 {
-      @extend %baslik;
+      @extend %heading;
       font-size: 26px;
       margin-top: 100px;
     }
@@ -196,7 +206,7 @@ header {
     gap: 50px;
 
     h1 {
-      @extend %baslik;
+      @extend %heading;
       text-align: center;
     }
 
@@ -263,11 +273,25 @@ footer {
     align-items: center;
     justify-content: center;
 
-    img {
-      max-width: 200px;
+    @include mobile {
+        align-items: center;
+        flex-direction: column;
     }
 
-    p {
+    img {
+      width: 200px;
+      @include mobile {
+        width: 400px;
+      }
+    }
+
+    article {
+      align-self: flex-start;
       color: white;
+      min-width: 300px;
+      font-size: 15px;
+      p {
+        margin-top: 10px;
+      }
     }
 }

@@ -11,7 +11,7 @@
 }
 
 #exterior, #interior {
-  height: 50vh;
+  height: 70vh;
   background-size: cover;
   background-position: center;
   color: white;
@@ -22,7 +22,7 @@
   gap: 70px;
 }
 #exterior h1, #interior h1 {
-  font-size: 30px;
+  font-size: 28px;
 }
 #exterior p, #interior p {
   font-size: 24px;
@@ -59,6 +59,17 @@ header {
   justify-content: space-between;
   font-family: "Poppins", sans-serif;
   color: #252a34;
+}
+@media (max-width: 1000px) {
+  header {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1500px) {
+  header {
+    align-items: center;
+  }
 }
 header nav {
   display: flex;
@@ -107,7 +118,6 @@ header #nav-right a {
 @media (min-width: 1001px) and (max-width: 1500px) {
   .hero {
     align-items: center;
-    flex-direction: column;
   }
 }
 
@@ -125,6 +135,11 @@ header #nav-right a {
 }
 #slogan h1 {
   font-size: 30px;
+}
+@media (max-width: 1000px) {
+  #slogan h1 {
+    font-size: 22px;
+  }
 }
 #slogan p {
   text-align: center;
@@ -260,9 +275,26 @@ footer {
   align-items: center;
   justify-content: center;
 }
-footer img {
-  max-width: 200px;
+@media (max-width: 1000px) {
+  footer {
+    align-items: center;
+    flex-direction: column;
+  }
 }
-footer p {
+footer img {
+  width: 200px;
+}
+@media (max-width: 1000px) {
+  footer img {
+    width: 400px;
+  }
+}
+footer article {
+  align-self: flex-start;
   color: white;
+  min-width: 300px;
+  font-size: 15px;
+}
+footer article p {
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */
