@@ -1,4 +1,4 @@
-%baslik {
+%heading {
     font-family: $font-second;
     white-space: nowrap;
     letter-spacing: 3px;
@@ -10,7 +10,7 @@
 }
   
 %design {
-    height: 50vh;
+    height: 70vh;
     background-size: cover;
     background-position: center;
     color: white;
@@ -21,8 +21,8 @@
     gap: 70px;
   
     h1 {
-      @extend %baslik;
-      font-size: 30px;
+      @extend %heading;
+      font-size: 28px;  
     }
   
     p {
