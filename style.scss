@@ -162,3 +162,93 @@ header {
       text-align: center;
     }
 }
+
+//MAIN SECTION
+
+//MAIN SEC - interior
+
+#interior {
+    @extend %design;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 10%, black),
+      url(images/interior.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+//MAIN SEC - exterior
+
+#exterior {
+    @extend %design;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 10%, black),
+      url(images/exterior-4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+  
+//MAIN SEC - cars-section
+  
+#cars-section {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    h1 {
+      @extend %baslik;
+      text-align: center;
+    }
+
+    .cars {
+      display: flex;
+      justify-content: center;
+      padding: 10px 100px;
+      gap: 50px;
+
+      @include tablet {
+        gap: 30px;
+      }
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      &-card {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+  
+        @include tablet {
+          width: 300px;
+        }
+
+        img {
+          width: 100%;
+          mix-blend-mode: darken;
+        }
+
+        h4 {
+          text-align: center;
+          white-space: nowrap;
+        }
+      }
+    }
+  
+    button {
+      background-color: $blue;
+      margin: auto;
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      transition: background 0.3s, color 0.3s;
+  
+      &:hover {
+        @extend %hover;
+        background: blue;
+        color: white;
+      }
+    }
+}

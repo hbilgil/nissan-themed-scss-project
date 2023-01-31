@@ -1,13 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-#slogan h2, #slogan h1 {
+#cars-section h1, #slogan h2, #slogan h1, #exterior h1, #interior h1 {
   font-family: "Inter", sans-serif;
   white-space: nowrap;
   letter-spacing: 3px;
 }
 
-#images-main:hover, #slogan button:hover {
+#cars-section button:hover, #images-main:hover, #slogan button:hover, #exterior button:hover, #interior button:hover {
   cursor: pointer;
   transition: all 0.5s;
+}
+
+#exterior, #interior {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+#exterior h1, #interior h1 {
+  font-size: 30px;
+}
+#exterior p, #interior p {
+  font-size: 24px;
+  max-width: 500px;
+  text-align: center;
+}
+#exterior button, #interior button {
+  color: white;
+  padding: 20px 50px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  background-color: transparent;
+  border: 2px solid white;
+  transition: background-color 0.5s;
+}
+#exterior button:hover, #interior button:hover {
+  background-color: white;
+  color: black;
 }
 
 * {
@@ -145,4 +178,76 @@ header #nav-right a {
 #images p {
   max-width: 500px;
   text-align: center;
+}
+
+#interior {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 10%, black), url(images/interior.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#exterior {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 10%, black), url(images/exterior-4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#cars-section {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+#cars-section h1 {
+  text-align: center;
+}
+#cars-section .cars {
+  display: flex;
+  justify-content: center;
+  padding: 10px 100px;
+  gap: 50px;
+}
+@media (min-width: 1001px) and (max-width: 1500px) {
+  #cars-section .cars {
+    gap: 30px;
+  }
+}
+@media (max-width: 1000px) {
+  #cars-section .cars {
+    flex-direction: column;
+  }
+}
+#cars-section .cars-card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 1001px) and (max-width: 1500px) {
+  #cars-section .cars-card {
+    width: 300px;
+  }
+}
+#cars-section .cars-card img {
+  width: 100%;
+  mix-blend-mode: darken;
+}
+#cars-section .cars-card h4 {
+  text-align: center;
+  white-space: nowrap;
+}
+#cars-section button {
+  background-color: #08d9d6;
+  margin: auto;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+#cars-section button:hover {
+  background: blue;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
